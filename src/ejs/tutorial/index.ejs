@@ -1,7 +1,8 @@
 <% baseUrlPath='..' ; ejsPath='.' ; pageData="tutorial" %>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page: json[pageData] }) %>
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
 
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
@@ -32,7 +33,7 @@
       <!-- HTML内のコメントアウト -->
 
       <div class="title">変数の設定</div>
-      <% let text1='これは変数を設定しています' %>
+      <% let text1='これは' %>
       <div class="text"><%= text1 %></div>
 
       <%# - と=の違い %>
@@ -50,7 +51,8 @@
       </ul>
 
       <div class="title">連想配列からの出力</div>
-      <% let text3={ title: 'CodeUpsのチーム開発' ,text: 'EJSを学習しています' } %>
+      <% let text3={ title: 'CodeUpsのチーム開発' ,text: 'EJSを学習しています' }
+      %>
       <div class="text"><%= text3.title %></div>
       <div class="text"><%- text3.text %></div>
 
@@ -63,7 +65,9 @@
       </ul>
 
       <div class="title">複数の連想配列をループで取り出す（for文）</div>
-      <% var people=[ { name: '太郎' , age: 20, gender: '男性' }, { name: '花子' , age: 30, gender: '女性' }, { name: '次郎' , age: 40, gender: '男性' } ]; %>
+      <% var people=[ { name: '太郎' , age: 20, gender: '男性' }, { name: '花子'
+      , age: 30, gender: '女性' }, { name: '次郎' , age: 40, gender: '男性' } ];
+      %>
       <ul>
         <% for(var i=0; i < people.length; i++) { %>
         <li>名前: <%= people[i].name %></li>
@@ -100,6 +104,7 @@
       <%- include(ejsPath + '/component/_c-title' ,{color:'black', title:'カードブロック'}) %>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-title' ,{color:'white', title:'カードブロック'}) %>
+      <!-- prettier-ignore -->
 
       <div class="title">カードブロックをインクルードして表示</div>
       <%- include(ejsPath + '/project/_p-cards' ) %>
